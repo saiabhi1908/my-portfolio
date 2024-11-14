@@ -1,0 +1,1153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #0F2A5A;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+}
+
+.navbar a:first-child {
+    margin-left: 0;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+/* Apply the same background image to both sections */
+.home, .about {
+    background: url('https://wallpaperaccess.com/full/2028888.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ededed; /* Text color for readability */
+    padding: 70px 10% 0;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.text {
+    color: #0ef;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ededed;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.profile-image {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Social Icons */
+.home-sci {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-sci a {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+    opacity: 0;
+    animation: slideDown 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover {
+    color: #0ef;
+}
+
+/* "More About Me" Button with Glow Effect */
+.btn-box {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.btn-box:hover {
+    background-color: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 1);
+    text-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 30px #0ef;
+}
+
+/* About Section Styling */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 6rem;
+}
+
+.about-img {
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+    transform: translateX(10%); /* Shift image slightly to the right */
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+/* Slide Animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Update the background for the services section */
+.services {
+    background: url('https://wallpaperaccess.com/full/2028888.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ededed;
+    padding: 70px 10%;
+}
+
+/* Optional: You may want to add some padding and styling adjustments for the content inside the services section */
+.services .container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text more readable */
+    border-radius: 8px;
+}
+
+/* Additional styling for the services section */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.services-list div {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for the individual service boxes */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.services-list div i {
+    font-size: 40px;
+    color: #12b3d5;
+    margin-bottom: 20px;
+}
+
+.services-list div h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.services-list div p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #0ef;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.services-list div a:hover {
+    color: #fff;
+}
+
+/* Styling the Typed.js text color */
+.role {
+    color: #0ef; /* Blue color for the typing effect */
+}
+
+
+/* Make "My Services" heading bigger */
+.sub-title {
+    font-size: 48px; /* Increase the size of the heading */
+    font-weight: bold;
+    color: #fff; /* Ensure the heading text is white */
+}
+
+/* Make the "Services" part in light blue */
+.sub-title span {
+    color: #0ef; /* Light blue color */
+}
+
+/* Change the services text to light blue */
+.services-list div h2 {
+    font-size: 28px; /* Slightly larger text for the service titles */
+    color: #0ef; /* Light blue color */
+}
+
+/* Style for the "Learn More" button */
+.read {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0ef; /* Light blue text color */
+    background-color: #1c1c1c; /* Dark background for better contrast */
+    border: 2px solid #0ef; /* Light blue border */
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Soft glowing effect */
+}
+
+/* Hover effect for a more glowing and vibrant look */
+.read:hover {
+    background-color: #0ef; /* Light blue background on hover */
+    color: #000; /* Change text color to black for contrast */
+    box-shadow: 0 0 20px 6px rgba(0, 255, 255, 1); /* Stronger glowing effect */
+    text-shadow: 0 0 15px #0ef, 0 0 25px #0ef, 0 0 35px #0ef; /* Intense glowing text */
+    transform: scale(1.1); /* Slightly increase size for emphasis */
+}
+
+/* Optional: Adding a subtle transition effect when the button is focused */
+.read:focus {
+    outline: none;
+    box-shadow: 0 0 20px 8px rgba(0, 255, 255, 1); /* Focused glow effect */
+}
+
+
+/* Skills Section */
+#Skills {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.technical-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.bar {
+    width: 250px;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.bar i {
+    font-size: 40px;
+    color: #0ef;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.bar:hover i {
+    color: #12b3d5;
+}
+
+.info {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.progress-line {
+    background: #3e3e3e;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-line span {
+    background: #0ef;
+    display: block;
+    height: 100%;
+    width: 0;
+    animation: progressAnimation 2s forwards;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--progress, 0);
+    }
+}
+
+/* Example of how you can set a custom progress for each bar */
+.html span {
+    --progress: 90%;
+}
+.css span {
+    --progress: 80%;
+}
+.javascript span {
+    --progress: 85%;
+}
+.react span {
+    --progress: 80%;
+}
+.nodejs span {
+    --progress: 75%;
+}
+.sql span {
+    --progress: 70%;
+}
+.mongodb span {
+    --progress: 60%;
+}
+.java span {
+    --progress: 80%;
+}
+.python span {
+    --progress: 85%;
+}
+.bigdata span {
+    --progress: 70%;
+}
+.ml span {
+    --progress: 75%;
+}
+.salesforce span {
+    --progress: 60%;
+}
+.git span {
+    --progress: 90%;
+}
+.problem-solving span {
+    --progress: 90%;
+}
+.teamwork span {
+    --progress: 90%;
+}
+
+
+/* Professional Skills (Radial Progress) */
+.radial-bars {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radial-bars svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.Proress-bar {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 10;
+}
+
+.Path {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dasharray 2s ease;
+}
+
+.path-1 {
+    stroke: #0ef;
+    stroke-dasharray: 0 502.65;
+}
+
+.percentage {
+    position: absolute;
+    top: 40%;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Specific values for each radial progress */
+.radial-bars:nth-child(1) .path-1 {
+    stroke-dasharray: 570 502.65;
+}
+
+.radial-bars:nth-child(2) .path-1 {
+    stroke-dasharray: 570 502.65;
+}
+
+.radial-bars:nth-child(3) .path-1 {
+    stroke-dasharray: 570 502.65;
+}
+
+.radial-bars:nth-child(4) .path-1 {
+    stroke-dasharray: 570 502.65;
+}
+
+.radial-bars:nth-child(5) .path-1 {
+    stroke-dasharray: 570 502.65;
+}
+
+/* General background for Skills and Professional Skills sections */
+#Skills, .container1 {
+    background-color: #121212; /* Same as Home and About Me */
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.heading, .heading1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Update for the radial bars container */
+.radial-bars {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212; /* Ensures the background matches */
+}
+
+.radial-bars svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+
+
+/* General background for Skills and Professional Skills sections */
+#Skills, .container1 {
+    background: url('https://wallpaperaccess.com/full/2028888.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Ensures the image covers the entire section */
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.heading, .heading1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Update for the radial bars container */
+.radial-bars {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(18, 18, 18, 0.7); /* Optional: semi-transparent overlay to improve readability */
+}
+
+.radial-bars svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+/* Adjust other section-related background elements */
+
+
+
+
+/* Add hover effect for skills */
+.technical-bar:hover {
+    transform: scale(1.1);
+}
+
+
+/* Center-align the container */
+.technical-skills-section { 
+    text-align: center;
+}
+
+/* Center-align technical bars within the section */
+.technical-bars {
+    display: inline-flex; /* inline-flex allows centering within the parent */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 800px; /* Optional: restrict width if bars are too wide */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+    padding: 60px 10%;
+    background: #0F2A5A;
+    color: #ededed;
+    text-align: center;
+}
+
+#portfolio .main-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#portfolio .main-text h2 span {
+    color: #0ef;
+}
+
+/* Portfolio Content Layout */
+.portfolio-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.row {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 42, 90, 0.9);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: #ededed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.row:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0ef;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #ededed;
+    text-align: center;
+}
+
+/* Link Icon Styling */
+.layer a {
+    color: #0ef;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.layer a:hover {
+    color: #fff;
+}
+
+/* Hover Animation for Image */
+.row:hover img {
+    transform: scale(1.1);
+}
+
+/* Animation for Project Layer Content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.layer h3, .layer p, .layer a {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.layer h3 {
+    animation-delay: 0.3s;
+}
+
+.layer p {
+    animation-delay: 0.4s;
+}
+
+.layer a {
+    animation-delay: 0.5s;
+}
+
+.row {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Adjust the height to fit all content */
+}
+
+.row img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 42, 90, 0.9);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: #ededed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+.row:hover .layer {
+    opacity: 1;
+}
+
+.layer h3, .layer p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.layer h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0ef;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ededed;
+    text-align: center;
+    max-height: 150px; /* Limit height to prevent overflow */
+    overflow-y: auto;  /* Add scroll if content exceeds */
+}
+
+/* Make sure the layer content is fully visible on hover */
+.row:hover img {
+    transform: scale(1.1);
+}
+
+/* Updated CSS */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.row {
+    position: relative;
+    width: 350px; /* Increased width */
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.row:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.layer p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.layer a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.layer a:hover {
+    color: #ff9800;
+}
+
+/* Set background image for Latest Project section */
+#portfolio {
+    background-image: url('https://wallpaperaccess.com/full/2028888.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    color: #fff;
+    position: relative; /* Ensures overlay is limited to this section */
+    z-index: 1;
+}
+
+/* Apply a slight overlay for better readability only in #portfolio */
+#portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+/* Main text within #portfolio section */
+#portfolio .main-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Styling specifically for headings and text within #portfolio */
+#portfolio h2 {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#portfolio h2 span {
+    color: #ff9800;
+}
+
+/* Ensure "About" section styles remain unaffected */
+#about {
+    background-color: #3718d1; /* Set a light background for About */
+    padding: 60px 20px;
+    color: #333; /* Default text color */
+}
+
+
+
+.about-text h2 span {
+    color: white;  /* This will make the 'About' text white */
+}
+
+/* Basic reset for padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Contact Section Styling */
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #ffffff;
+}
+
+/* Heading styling */
+.contact-text h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+.contact-text h2 span {
+    color: #f0f0f0;
+    font-weight: normal;
+    animation: textGlow 1s ease-in-out infinite alternate;
+}
+
+.contact-text h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #b8c6db;
+}
+
+/* Contact List and Icons */
+.contact-list li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.contact-list li i {
+    color: #00c6ff;
+    margin-right: 10px;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.8em;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #00c6ff;
+    transform: scale(1.2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 45%;
+}
+
+/* Enhanced styling for input fields (name and email) */
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px; /* More rounded corners */
+    background: linear-gradient(135deg, #243b55, #141e30); /* Soft gradient */
+    color: #ffffff;
+    font-size: 1em;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 198, 255, 0.1);
+}
+
+/* Placeholder Styling */
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder {
+    color: #8ba6c1;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Hover and Focus Effects for input fields */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0px 5px 15px rgba(0, 246, 255, 0.3), 0 0 10px #00c6ff;
+    transform: scale(1.02); /* Slight scale on focus */
+}
+
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover {
+    box-shadow: 0px 5px 12px rgba(0, 230, 255, 0.25);
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #00c6ff;
+    border-radius: 8px;
+    background: #243b55;
+    color: #ffffff;
+    font-size: 1em;
+    resize: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Submit button styling */
+.send {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00f6ff, #0066ff);
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 102, 255, 0.4);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Submit button hover effect */
+.send:hover {
+    background: linear-gradient(90deg, #0066ff, #00f6ff);
+    box-shadow: 0px 5px 20px rgba(0, 102, 255, 0.6);
+}
+
+/* Glow effect for 'Contact Me' heading */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff, 0 0 15px #00c6ff;
+    }
+    100% {
+        text-shadow: 0 0 15px #00f6ff, 0 0 20px #00f6ff, 0 0 25px #00f6ff;
+    }
+}
