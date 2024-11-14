@@ -15,9 +15,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors({ origin: 'https://saiabhi1908.github.io' }));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(cors({ origin: 'https://saiabhi1908.github.io' }));
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 app.use(express.static(path.join('C:', 'Users', 'Admin', 'Downloads', 'resources')));
 
