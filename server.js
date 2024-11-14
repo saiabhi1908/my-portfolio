@@ -1,3 +1,4 @@
+/* 
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
@@ -73,4 +74,5 @@ app.get('/check-emails', (req, res) => {
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-});
+}); 
+*/
