@@ -315,27 +315,27 @@
         <script src="main.js"></script>
         
         <script>
-            document.getElementById("contactForm").addEventListener("submit", async function (event) {
-                event.preventDefault(); // Prevent form from reloading page
+            // document.getElementById("contactForm").addEventListener("submit", async function (event) {
+                // event.preventDefault(); // Prevent form from reloading page
                 
-                const formData = new FormData(this); // Create a FormData object from the form
-                const response = await fetch('/send-email', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: formData.get('name'),
-                        email: formData.get('email'),
-                        subject: formData.get('subject'),
-                        message: formData.get('message')
-                    })
-                });
+                // const formData = new FormData(this); // Create a FormData object from the form
+                // const response = await fetch('/send-email', {
+                    // method: 'POST',
+                    // headers: { 'Content-Type': 'application/json' },
+                    // body: JSON.stringify({
+                        // name: formData.get('name'),
+                        // email: formData.get('email'),
+                        // subject: formData.get('subject'),
+                        // message: formData.get('message')
+                    // })
+                // });
         
-                if (response.ok) {
-                    alert("Message sent successfully!"); // Success
-                } else {
+                // if (response.ok) {
+                    // alert("Message sent successfully!"); // Success
+               //  } else {
                     alert("Failed to send message."); // Failure
-                }
-            });
+                // }
+            // });
         </script>
         
 
