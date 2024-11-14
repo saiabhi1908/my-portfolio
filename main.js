@@ -11,25 +11,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Handle contact form submission
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent default form submission
+// document.getElementById("contactForm").addEventListener("submit", async function (event) {
+    // event.preventDefault(); // Prevent default form submission
 
-    const formData = new FormData(this); // Get form data
-    const response = await fetch('/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name: formData.get('name'),
-            email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message')
-        })
-    });
+    // const formData = new FormData(this); // Get form data
+   // const response = await fetch('/send-email', {
+       // method: 'POST',
+       // headers: { 'Content-Type': 'application/json' },
+       // body: JSON.stringify({
+           // name: formData.get('name'),
+           // email: formData.get('email'),
+            // subject: formData.get('subject'),
+            // message: formData.get('message')
+        // })
+   // });
 
     // Handle response
-    if (response.ok) {
-        alert("Message sent successfully!");
-    } else {
-        alert("Failed to send message.");
-    }
-});
+    // if (response.ok) {
+        // alert("Message sent successfully!");
+   // } else {
+        // alert("Failed to send message.");
+    // }
+// });
