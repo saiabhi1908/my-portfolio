@@ -1342,6 +1342,57 @@ body {
     color: #0056b3; /* Darker blue on hover */
 }
 
+/* Default Light Mode Styles (your existing styles) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar a {
+    color: #000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+/* Optionally, you can add more styling for the dark mode */
+body.dark-mode .toggle-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .toggle-btn:hover {
+    background-color: #555;
+}
+.navbar a:hover {
+    color: #0ef;  /* or any color you prefer */
+    text-decoration: underline;
+}
+
+/* Styling the dark mode toggle button */
+.toggle-btn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Optional for spacing */
+}
+
+.toggle-btn:hover {
+    background-color: #005f73;
+}
+
+
+
 
 
 
