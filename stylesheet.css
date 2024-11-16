@@ -1330,3 +1330,14 @@ body {
 .sub-title span {
     margin-left: 0.01px;  /* Optional, to adjust spacing between "My" and "Skills" */
 }
+
+
+.bxs-phone-call {
+    color: #25D366; /* WhatsApp green */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.bxs-phone-call:hover {
+    color: #128C7E; /* Hover effect for WhatsApp call icon */
+}
