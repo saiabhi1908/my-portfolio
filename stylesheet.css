@@ -1333,11 +1333,15 @@ body {
 
 
 .bxs-phone-call {
-    color: #25D366; /* WhatsApp green */
+    color: #007AFF; /* iOS blue */
     font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .bxs-phone-call:hover {
-    color: #128C7E; /* Hover effect for WhatsApp call icon */
+    color: #0056b3; /* Darker blue on hover */
 }
+
+
+
+
