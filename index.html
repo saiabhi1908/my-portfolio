@@ -30,7 +30,23 @@
             <a href="#location" style="--i:5">Location</a>
             <a href="#contact" style="--i:5">Contact</a>
         </nav>
+
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        
     </header>
+
+    <script>
+        // Dark mode toggle function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Load user preference from localStorage
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 
     <section class="home" id="home">
         <div class="home-content">
