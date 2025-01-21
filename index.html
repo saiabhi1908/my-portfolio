@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +13,78 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Add the Typed.js library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        AOS.init();
+        duration: 1000;  // Animation duration
+        easing: 'ease'; // Easing function
+        once: true
+    </script>
 
     <style>
+
+        
         /* Custom CSS to change the color of 'About' text in About Me section */
         .about-text h2 span {
             color: #0ef;
         }
+        .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.row {
+    position: relative;
+    text-align: center;
+    transform: translateX(5px); /* Adjust this value to move towards the right */
+}
+
+.row:nth-child(1) {
+    transform: translateX(5px); /* Slightly less to keep the alignment subtle */
+}
+
+.row:nth-child(2) {
+    transform: translateX(0px); /* Slightly more to shift further right */
+}
+
+.row:nth-child(3) {
+    transform: translateX(10px); /* Even more to continue the rightward trend */
+}
+
+.layer {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    padding: 20px;
+}
+
+.row:hover .layer {
+    opacity: 1;
+}
+
+.portfolio-content .row:nth-child(4) {
+    grid-column: 1 / span 3;
+    justify-self: center;
+    transform: translateX(0); /* Keep the fourth card centered */
+}
+
     </style>
 </head>
+
 <body>
+
+
+
+
+
+
 
 
     <header class="header">
@@ -36,7 +99,8 @@
         </nav>
 
         <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        
+
+
     </header>
 
     <script>
@@ -58,20 +122,28 @@
                 <h3>Hello, It's Me</h3>
                 <h1>Sai Abhinav Kolli</h1>
                 <h3>I'm a <span class="role"></span></h3>
-                <p>I'm a Master's freshman at the Illinois Institute of Technology, specializing in Information Technology and
-                    Management. With a strong foundation in Java, Python, web Development, Big Data, and Linux. I have experience as
-                    a Salesforce Developer intern, customizing applications and integrating systems to enhance functionality and efficiency.</p>
-                
+                <p>I'm a Master's freshman at the Illinois Institute of Technology, specializing in Information
+                    Technology and
+                    Management. With a strong foundation in Java, Python, web Development, Big Data, and Linux. I have
+                    experience as
+                    a Salesforce Developer intern, customizing applications and integrating systems to enhance
+                    functionality and efficiency.</p>
+
                 <div class="home-sci">
                     <!-- Add icons for social links -->
-                    <a href="https://www.linkedin.com/in/sai-abhinav-kolli-16590a203/" target="_blank" style="--i:7"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/saiabhi1908/skolli5" target="_blank" style="--i:8"><i class="bx bxl-github"></i></a>
-                    <a href="https://wa.me/916304652749" target="_blank" style="--i:9"><i class="bx bxl-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/sai_abhi_9x2/" target="_blank" style="--i:10"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sai-abhinav-kolli-16590a203/" target="_blank" style="--i:7"><i
+                            class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/saiabhi1908/skolli5" target="_blank" style="--i:8"><i
+                            class="bx bxl-github"></i></a>
+                    <a href="https://wa.me/916304652749" target="_blank" style="--i:9"><i
+                            class="bx bxl-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/sai_abhi_9x2/" target="_blank" style="--i:10"><i
+                            class="bx bxl-instagram"></i></a>
                     <a href="tel:+12245564775" style="--i:11"><i class="bx bxs-phone-call"></i></a>
                 </div>
-                
-                <a href="https://drive.google.com/file/d/1SQa6OkTiKPI5LPbyvTgiT95aKIfHxfxm/view?usp=sharing" class="btn-box">My Resume</a>
+
+                <a href="https://drive.google.com/file/d/1SQa6OkTiKPI5LPbyvTgiT95aKIfHxfxm/view?usp=sharing"
+                    class="btn-box">My Resume</a>
             </div>
             <img src="resources/image.JPG">
         </div>
@@ -84,15 +156,22 @@
         <div class="about-text">
             <h2>About<span> Me</span></h2>
             <h4>Full Stack Developer</h4>
-            <p>I am a motivated Master's freshman at the Illinois Institute of Technology, specializing in Information Technology and Management.</p>
+            <p>I am a motivated Master's freshman at the Illinois Institute of Technology, specializing in Information
+                Technology and Management.</p>
 
-<p>With a strong technical foundation in Java, Python, web development, Big Data, and Linux, I am passionate about solving complex problems and creating innovative solutions.</p>
+            <p>With a strong technical foundation in Java, Python, web development, Big Data, and Linux, I am passionate
+                about solving complex problems and creating innovative solutions.</p>
 
-<p>I gained valuable hands-on experience as a Salesforce Developer Intern, where I customized Salesforce applications and integrated third-party systems to enhance user functionality and streamline operations. My expertise lies in leveraging cutting-edge technologies to drive efficiency and make a meaningful impact.</p>
+            <p>I gained valuable hands-on experience as a Salesforce Developer Intern, where I customized Salesforce
+                applications and integrated third-party systems to enhance user functionality and streamline operations.
+                My expertise lies in leveraging cutting-edge technologies to drive efficiency and make a meaningful
+                impact.</p>
 
-<p>As I continue to expand my knowledge and skills, I am eager to contribute to dynamic projects that foster professional growth and drive technological innovation.</p>
+            <p>As I continue to expand my knowledge and skills, I am eager to contribute to dynamic projects that foster
+                professional growth and drive technological innovation.</p>
 
-            <a href="https://drive.google.com/file/d/1SQa6OkTiKPI5LPbyvTgiT95aKIfHxfxm/view?usp=sharing" class="btn-box">More About Me</a>
+            <a href="https://drive.google.com/file/d/1SQa6OkTiKPI5LPbyvTgiT95aKIfHxfxm/view?usp=sharing"
+                class="btn-box">More About Me</a>
         </div>
     </section>
 
@@ -104,20 +183,24 @@
                     <div>
                         <i class='bx bx-code' style='color:#12b3d5'></i>
                         <h2>UI/UX Design</h2>
-                        <p>Designing intuitive and visually appealing user interfaces for web and mobile applications, ensuring seamless user experiences.</p>
-                        <a href="https://www.figma.com/resource-library/difference-between-ui-and-ux/" class="read">learn more</a>
+                        <p>Designing intuitive and visually appealing user interfaces for web and mobile applications,
+                            ensuring seamless user experiences.</p>
+                        <a href="https://www.figma.com/resource-library/difference-between-ui-and-ux/"
+                            class="read">Learn more</a>
                     </div>
                     <div>
                         <i class='bx bx-crop'></i>
                         <h2>Web Development</h2>
-                        <p>Developing responsive, fast, and reliable websites using modern technologies to bring your business online.</p>
-                        <a href="https://www.w3schools.com/whatis/" class="read">learn more</a>
+                        <p>Developing responsive, fast, and reliable websites using modern technologies to bring your
+                            business online.</p>
+                        <a href="https://www.w3schools.com/whatis/" class="read">Learn more</a>
                     </div>
                     <div>
                         <i class='bx bxl-apple' style='color:#12b3d5'></i>
                         <h2>Data Scientist</h2>
-                        <p>Applying machine learning and data analysis techniques to extract insights and help make data-driven decisions.</p>
-                        <a href="https://builtin.com/learn/careers/data-scientist" class="read">learn more</a>
+                        <p>Applying machine learning and data analysis techniques to extract insights and help make
+                            data-driven decisions.</p>
+                        <a href="https://builtin.com/learn/careers/data-scientist" class="read">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -126,97 +209,99 @@
 
     <h1 class="sub-title">My <span>Skills</span></h1>
 
-<section id="Skills">
-    <div class="container1">
-        <h1 class="heading">Technical Skills</h1>
-        <div class="technical-bars">
-            <div class="bar html">
-                <i class='bx bxl-html5' style="color: #147bbc;"></i>
-                <div class="info"><span>HTML</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar css">
-                <i class='bx bxl-css3' style="color: #147bbc;"></i>
-                <div class="info"><span>CSS</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar javascript">
-                <i class='bx bxl-javascript' style="color: #147bbc;"></i>
-                <div class="info"><span>Javascript</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar data-analysing">
-                <i class='bx bxs-data' style="color: #147bbc;"></i>
-                <div class="info"><span>Data Analysing</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar react">
-                <i class='bx bxl-react' style="color: #147bbc;"></i>
-                <div class="info"><span>React</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar nodejs">
-                <i class='bx bxl-nodejs' style="color: #147bbc;"></i>
-                <div class="info"><span>Node.js</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar sql">
-                <i class='bx bxl-postgresql' style="color: #147bbc;"></i>
-                <div class="info"><span>SQL</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar mongodb">
-                <i class='bx bxl-mongodb' style="color: #147bbc;"></i>
-                <div class="info"><span>MongoDB</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar java">
-                <i class='bx bxl-java' style="color: #147bbc;"></i>
-                <div class="info"><span>Java</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar python">
-                <i class='bx bxl-python' style="color: #147bbc;"></i>
-                <div class="info"><span>Python</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar bigdata">
-                <i class='bx bx-data' style="color: #147bbc;"></i>
-                <div class="info"><span>Big Data Infrastructure</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar ml">
-                <i class='bx bxs-brain' style="color: #147bbc;"></i>
-                <div class="info"><span>Machine Learning</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar salesforce">
-                <i class='bx bx-shape-triangle' style="color: #147bbc;"></i>
-                <div class="info"><span>Salesforce</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar apex-programming">
-                <i class='bx bx-shape-triangle' style="color: #147bbc;"></i>
-                <div class="info"><span>Apex Programming</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar git">
-                <i class='bx bxl-github' style="color: #147bbc;"></i>
-                <div class="info"><span>Git</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar problem-solving">
-                <i class='bx bx-spreadsheet' style="color: #147bbc;"></i>
-                <div class="info"><span>Problem Solving</span></div>
-                <div class="progress-line"><span></span></div>
-            </div>
-            <div class="bar teamwork">
-                <i class='bx bx-signal-5' style="color: #147bbc;"></i>
-                <div class="info"><span>Team Work</span></div>
-                <div class="progress-line"><span></span></div>
+    <section id="Skills">
+
+        <div class="container1">
+            <h1 class="heading">Technical Skills</h1>
+            <div class="technical-bars">
+                <div class="bar html">
+                    <i class='bx bxl-html5' style="color: #147bbc;"></i>
+                    <div class="info"><span>HTML</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar css">
+                    <i class='bx bxl-css3' style="color: #147bbc;"></i>
+                    <div class="info"><span>CSS</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar javascript">
+                    <div class="skill" data-aos="fade-up"></div>
+                    <i class='bx bxl-javascript' style="color: #147bbc;"></i>
+                    <div class="info"><span>Javascript</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar data-analysing">
+                    <i class='bx bxs-data' style="color: #147bbc;"></i>
+                    <div class="info"><span>Data Analysing</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar react">
+                    <i class='bx bxl-react' style="color: #147bbc;"></i>
+                    <div class="info"><span>React</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar nodejs">
+                    <i class='bx bxl-nodejs' style="color: #147bbc;"></i>
+                    <div class="info"><span>Node.js</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar sql">
+                    <i class='bx bxl-postgresql' style="color: #147bbc;"></i>
+                    <div class="info"><span>SQL</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar mongodb">
+                    <i class='bx bxl-mongodb' style="color: #147bbc;"></i>
+                    <div class="info"><span>MongoDB</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar java">
+                    <i class='bx bxl-java' style="color: #147bbc;"></i>
+                    <div class="info"><span>Java</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar python">
+                    <i class='bx bxl-python' style="color: #147bbc;"></i>
+                    <div class="info"><span>Python</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar bigdata">
+                    <i class='bx bx-data' style="color: #147bbc;"></i>
+                    <div class="info"><span>Big Data Infrastructure</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar ml">
+                    <i class='bx bxs-brain' style="color: #147bbc;"></i>
+                    <div class="info"><span>Machine Learning</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar salesforce">
+                    <i class='bx bx-shape-triangle' style="color: #147bbc;"></i>
+                    <div class="info"><span>Salesforce</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar apex-programming">
+                    <i class='bx bx-shape-triangle' style="color: #147bbc;"></i>
+                    <div class="info"><span>Apex Programming</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar git">
+                    <i class='bx bxl-github' style="color: #147bbc;"></i>
+                    <div class="info"><span>Git</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar problem-solving">
+                    <i class='bx bx-spreadsheet' style="color: #147bbc;"></i>
+                    <div class="info"><span>Problem Solving</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
+                <div class="bar teamwork">
+                    <i class='bx bx-signal-5' style="color: #147bbc;"></i>
+                    <div class="info"><span>Team Work</span></div>
+                    <div class="progress-line"><span></span></div>
+                </div>
             </div>
         </div>
-    </div>
         </div>
 
         <div class="container1">
@@ -265,46 +350,76 @@
     </section>
 
     <section>
-        <div id="portfolio" id="project">
-            <div class="main-text" id="project">
+        <div id="portfolio">
+            <div class="main-text">
                 <h2>Latest<span>Projects</span></h2>
                 <div class="portfolio-content">
+                    <!-- Project 1 -->
                     <div class="row">
                         <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/dae3ad165432299.640765cf82349.png">
                         <div class="layer">
                             <h3>FoodFusion</h3>
-                            <p>Developed a comprehensive e-commerce platform dedicated to selling food and related products. The website features user-friendly
-                                navigation, a secure payment system, and an inventory management system. Users can browse various food items, view detailed product
-                                descriptions, and place orders seamlessly. The platform also includes a recommendation system to enhance user experience and promote
+                            <p>Developed a comprehensive e-commerce platform dedicated to selling food and related
+                                products. The website features user-friendly
+                                navigation, a secure payment system, and an inventory management system. Users can
+                                browse various food items, view detailed product
+                                descriptions, and place orders seamlessly. The platform also includes a recommendation
+                                system to enhance user experience and promote
                                 sales.</p>
-                                <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
+                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
                         </div>
                     </div>
+    
+                    <!-- Project 2 -->
                     <div class="row">
                         <img src="https://th.bing.com/th/id/R.d6ee0966aadd2bef8997d0257c383c18?rik=FJ5oBbfUJSXi5Q&pid=ImgRaw&r=0">
                         <div class="layer">
                             <h3>Covitrack</h3>
-                            <p>Developed an interactive web app delivering real-time COVID-19 statistics, including active cases, recoveries, deaths, and local infection
-                                rates. The user-friendly interface provides global stats, location-based alerts, and vaccination details, such as nearby centers, available
-                                vaccines, pricing, and worldwide vaccination totals. This platform empowers users with essential data to stay informed and make safe
+                            <p>Developed an interactive web app delivering real-time COVID-19 statistics, including
+                                active cases, recoveries, deaths, and local infection
+                                rates. The user-friendly interface provides global stats, location-based alerts, and
+                                vaccination details, such as nearby centers, available
+                                vaccines, pricing, and worldwide vaccination totals. This platform empowers users with
+                                essential data to stay informed and make safe
                                 choices.</p>
-                                <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
+                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
                         </div>
                     </div>
+    
+                    <!-- Project 3 -->
                     <div class="row">
-                        <img src="https://th.bing.com/th/id/OIP.grPl70InDkyv6iAxdVOtnAHaEJ?rs=1&pid=ImgDetMaing">
+                        <img src="https://th.bing.com/th/id/OIP.grPl70InDkyv6iAxdVOtnAHaEJ?rs=1&pid=ImgDetMain">
                         <div class="layer">
-                            <h3>Preserving the Security of Crypto Transactions using RNN and ML Techniques with Web Interface</h3>
-                            <p>Implemented a system for securing cryptocurrency transactions using Recurrent Neural Networks (RNN) and machine learning algorithms.
-                                This project focuses on anomaly detection in blockchain data to prevent fraud and unauthorized transactions. A web interface was integrated
-                                to monitor transaction statuses in real-time..</p>
-                                <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
+                            <h3>Preserving the Security of Crypto Transactions using RNN and ML Techniques with Web
+                                Interface</h3>
+                            <p>Implemented a system for securing cryptocurrency transactions using Recurrent Neural
+                                Networks (RNN) and machine learning algorithms.
+                                This project focuses on anomaly detection in blockchain data to prevent fraud and
+                                unauthorized transactions. A web interface was integrated
+                                to monitor transaction statuses in real-time.</p>
+                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
+                        </div>
+                    </div>
+    
+                    <!-- Project 4 -->
+                    <div class="row">
+                        <img src="https://cdn.dayschedule.com/img/solutions/doctor-appointment-booking-calendar-app.png">
+                        <div class="layer">
+                            <h3>Online Doctor Appointment Booking System</h3>
+                            <p>Developed a web-based platform for booking doctor appointments with features like a
+                                Doctor Panel for managing schedules for each doctor,
+                                and an Admin Panel for overseeing operations, including doctor management and appointment tracking.
+                                Integrated secure authentication,
+                                appointment reminders, and payment processing for a seamless user experience. Technologies used:
+                                React.js, Node.js, JavaScript, MongoDB.</p>
+                            <a href="#"><i class="bx bx-link-external" style="color:aliceblue"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="contact" id="contact">
         <div class="contact-text">
@@ -313,17 +428,17 @@
             <p>Contact me for any further assistance</p>
             <div class="contact-list">
                 <li><i class='bx bx-send'></i>praveenakolli08@gmail.com</li>
-                <li><i class='bx bxs-phone'></i>+12245564775</li>
+                <li><i class='bx bxs-phone'></i>+916304652749</li>
             </div>
             <div class="contact-icons">
                 <a href="https://www.instagram.com/sai_abhi_9x2/"><i class='bx bxl-instagram'></i></a>
-                <a href="https://wa.me/12245564775"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/916304652749"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.linkedin.com/in/sai-abhinav-kolli-16590a203/"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/saiabhi1908/skolli5"><i class='bx bxl-github'></i></a>
             </div>
         </div>
 
-          <div class="contact-form">
+        <div class="contact-form">
             <form id="contactForm">
                 <input type="text" name="name" placeholder="Enter Your Name" required>
                 <input type="email" name="email" placeholder="Enter Your Email" required>
@@ -345,7 +460,7 @@
             function updateMapWithLocation(latitude, longitude) {
                 // Build the Google Maps iframe URL dynamically
                 const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24184.984059495235!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2b2f41ad7ed7%3A0x378ed24f208e5c3d!2s3445%20S%20Rhodes%20Ave%2C%20Chicago%2C%20IL%2060609!5e0!3m2!1sen!2sus!4v1616468647158!5m2!1sen!2sus`;
-        
+
                 // Create the iframe element
                 const iframe = document.createElement("iframe");
                 iframe.src = mapUrl;
@@ -354,19 +469,19 @@
                 iframe.style.border = "0";
                 iframe.allowfullscreen = "";
                 iframe.loading = "lazy";
-        
+
                 // Insert the iframe into the map container
                 document.getElementById("map-container").innerHTML = "";
                 document.getElementById("map-container").appendChild(iframe);
             }
-        
+
             // Check if geolocation is available and get the location
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
+                navigator.geolocation.getCurrentPosition(function (position) {
                     const latitude = position.coords.latitude;
                     const longitude = position.coords.longitude;
                     updateMapWithLocation(latitude, longitude);
-                }, function(error) {
+                }, function (error) {
                     alert("Unable to retrieve your location. Showing default location.");
                     // Fallback to a default location (Chicago in this case)
                     updateMapWithLocation(41.813749, -87.606004); // Default: Chicago
@@ -377,14 +492,14 @@
                 updateMapWithLocation(41.813749, -87.606004); // Default: Chicago
             }
         </script>
-        
+
 
         <script src="main.js"></script>
-        
+
         <script>
             document.getElementById("contactForm").addEventListener("submit", async function (event) {
                 event.preventDefault(); // Prevent form from reloading page
-                
+
                 const formData = new FormData(this); // Create a FormData object from the form
                 const response = await fetch('https://my-portfolio-eta-two-18.vercel.app/send-email', {
                     method: 'POST',
@@ -396,7 +511,7 @@
                         message: formData.get('message')
                     })
                 });
-        
+
                 if (response.ok) {
                     alert("Message sent successfully!"); // Success
                 } else {
@@ -404,8 +519,9 @@
                 }
             });
         </script>
-        
+
 
 
 </body>
+
 </html>
